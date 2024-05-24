@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap");
+@media only screen and (max-width: 768px) {
+}
 * {
   margin: 0;
   padding: 0;
@@ -55,13 +57,13 @@ body {
   height: 924px;
 }
 .img_background_about {
-  background-image: url("asset/PP_LucasMaroy_bef_ RVB 2.jpg");
+  background-image: url("asset/PP_LucasMaroy_bef_nb\ copie\ 2.jpg");
   background-position: center;
   /* height: 924px; */
 }
 .body-container {
   width: 100vw;
-  background-color: #fffcf7;
+  background-color: #000000;
   z-index: 1;
   /* height: 100vh; */
   display: flex;
@@ -121,8 +123,9 @@ body {
   word-spacing: -2px;
 }
 .title-education {
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   margin-top: 4rem;
+  color: #3cff00;
 }
 .educ_canontainer {
   width: 100%;
@@ -136,8 +139,8 @@ body {
 .ed-2,
 .ed-3,
 .ed-4 {
-  background-color: rgb(234, 234, 234);
-  border: 2px solid #d3d3d3;
+  background-color: rgba(192, 230, 195, 0.213);
+  border: 2px solid #d3d3d355;
   border-radius: 24px;
   padding: 1.5rem;
 }
@@ -146,14 +149,22 @@ body {
 .ed-3 h2,
 .ed-4 h2 {
   margin-bottom: 10px;
+  color: #3cff00;
 }
 .ed-1 h3,
 .ed-2 h3,
 .ed-3 h3,
 .ed-4 h3 {
+  color: #3cff00;
   font-style: italic;
   margin-bottom: 4px;
   font-weight: 300;
+}
+.ed-1 p,
+.ed-2 p,
+.ed-3 p,
+.ed-4 p {
+  color: #3cff00;
 }
 .expe_container {
   width: 100%;
@@ -165,17 +176,20 @@ body {
 }
 .title_expe {
   margin-bottom: 1.5rem;
+  color: #3cff00;
 }
 .ex-2,
 .ex-6 {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  color: #3cff00;
 }
 .ex-3 {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  color: #3cff00;
 }
 .ex-1,
 .ex-2,
@@ -191,17 +205,24 @@ body {
 .ex-1,
 .ex-4,
 .ex-5 {
-  background-color: rgb(234, 234, 234);
-  border: 2px solid #d3d3d3;
+  background-color: rgba(192, 230, 195, 0.213);
+  border: 2px solid #d3d3d355;
   border-radius: 24px;
 }
 .ex-1 h2,
 .ex-4 h2,
 .ex-5 h2 {
-  margin-bottom: 6px;
+  color: #3cff00;
+  margin-bottom: 10px;
+}
+.ex-1 p,
+.ex-4 p,
+.ex-5 p {
+  color: #3cff00;
 }
 .title_skils {
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  color: #3cff00;
 }
 .skils {
   width: 100%;
@@ -217,6 +238,17 @@ body {
 .sk-8 {
   display: flex;
   align-items: center;
+  color: #3cff00;
+}
+.sk-1 h2,
+.sk-2 h2,
+.sk-3 h2,
+.sk-4 h2,
+.sk-5 h2,
+.sk-6 h2,
+.sk-7 h2,
+.sk-8 h2 {
+  font-weight: 400;
 }
 /* .sk-1 h2{
   margin-right: 2rem;
@@ -282,7 +314,8 @@ body {
 }
 .title_lunguage {
   margin-top: 8rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  color: #3cff00;
 }
 .lunguage {
   width: 100%;
@@ -295,6 +328,12 @@ body {
 .lu-3 {
   display: flex;
   align-items: center;
+  color: #3cff00;
+}
+.lu-1 h2,
+.lu-2 h2,
+.lu-3 h2 {
+  font-weight: 400;
 }
 .lu-sb-1,
 .lu-sb-2,
@@ -326,10 +365,11 @@ body {
 .xp-lu-3 {
   width: 10%;
 }
-.link {
+footer .link {
   width: 100vw;
   height: 64px;
-  background-color: #d3d3d3;
+  background-color: rgb(234, 234, 234);
+  border: 2px solid #d3d3d355;
   display: flex;
   justify-content: center;
 }
@@ -343,4 +383,8 @@ body {
   font-weight: 400;
   text-decoration: none;
   color: #000;
+}
+.container-nav a {
+  text-decoration: none;
+  color: #d3d3d3;
 }
