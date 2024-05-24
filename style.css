@@ -1,25 +1,40 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 header {
-  /* background-color: blue; */
-  display: flex;
-  justify-content: center;
-  margin-bottom: 90px;
+  background-color: #383737;
 }
 body {
-  background-color: #FFFCF7;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Epilogue", "Open Sans", sans-serif;
+  font-optical-sizing: auto;
 }
-header .main-container {
-  background-color: #FFFCF7;
+.shadow_header {
+  width: 100%;
+  height: 95px;
+  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.5);
+  position: absolute;
+  z-index: 0;
+}
+.header-container {
+  color: #fffcf7;
+  width: 100%;
+  height: 95px;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+}
+.header-sub-container {
+  /* background-color: #fffcf7; */
   width: 80%;
+  background-color: #383737;
   height: 95px;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
+  /* box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.5); */
 }
 .container-nav,
 .container-name {
@@ -30,52 +45,84 @@ header .main-container {
 }
 .nav-name {
   font-size: 1.6rem;
-  font-weight: 900;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.img_background_about {
+  position: absolute;
+  z-index: 0;
+  width: 200%;
+  height: 924px;
+}
+.img_background_about {
+  background-image: url("asset/PP_LucasMaroy_bef_ RVB 2.jpg");
+  background-position: center;
+  /* height: 924px; */
 }
 .body-container {
   width: 100vw;
+  background-color: #fffcf7;
+  z-index: 1;
   /* height: 100vh; */
   display: flex;
   justify-content: center;
 }
 .body-sub-container {
   width: 80%;
+  z-index: 1;
 }
-.body-sub-container .about img {
-  border-radius: 100%;
-  border: 1rem solid white;
-  box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.5);
-}
-.about {
-  display: flex;
-  justify-content: center;
-  /* grid-template: 1fr 1fr 1fr / 1fr 1fr; */
-  gap: 10px;
+.about_container {
   width: 100%;
-  height: 456.95px;
-  margin-bottom: 12rem;
+  height: 897px;
 }
-.about img {
+.about_container h1 {
+  margin-top: 5rem;
+  text-align: left;
+  word-spacing: 50px;
+  font-weight: 600;
+  font-size: 80px;
+  text-transform: uppercase;
+  color: #3cff00;
+  /* color: #A1FFFF; */
+}
+.about_contenue {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  position: relative;
+  bottom: 200px;
+  width: 100%;
+  height: 100%;
+  /* margin-bottom: 12rem;
+  margin-top: 6rem; */
+}
+.about_contenue img {
   width: 30%;
+  border-radius: 17%;
+  /* border: 1rem solid white; */
+  box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.5);
   /* height: 55%; */
-  margin-right: 40px;
+  /* margin-right: 8rem; */
 }
 .textabout {
   width: 40%;
-  align-self: center;
+  display: flex;
+  gap: 1rem;
 }
-.textabout h1 {
-  padding-bottom: 1.5rem;
-}
+
 .textabout h2 {
-  padding-bottom: 5px;
+  color: #d3d3d3;
+  font-weight: 500;
+  padding-bottom: 9px;
 }
-.about .textabout p {
+.textabout p {
   text-align: justify;
+  color: #d3d3d3;
   word-spacing: -2px;
 }
 .title-education {
   margin-bottom: 1rem;
+  margin-top: 4rem;
 }
 .educ_canontainer {
   width: 100%;
@@ -90,21 +137,22 @@ header .main-container {
 .ed-3,
 .ed-4 {
   background-color: rgb(234, 234, 234);
-  border-radius: 20px;
+  border: 2px solid #d3d3d3;
+  border-radius: 24px;
   padding: 1.5rem;
 }
 .ed-1 h2,
 .ed-2 h2,
 .ed-3 h2,
 .ed-4 h2 {
-  margin-bottom: 6px;
+  margin-bottom: 10px;
 }
 .ed-1 h3,
 .ed-2 h3,
 .ed-3 h3,
 .ed-4 h3 {
   font-style: italic;
-  margin-bottom: 2px;
+  margin-bottom: 4px;
   font-weight: 300;
 }
 .expe_container {
@@ -144,6 +192,8 @@ header .main-container {
 .ex-4,
 .ex-5 {
   background-color: rgb(234, 234, 234);
+  border: 2px solid #d3d3d3;
+  border-radius: 24px;
 }
 .ex-1 h2,
 .ex-4 h2,
@@ -180,7 +230,7 @@ header .main-container {
 .sk-sb-7,
 .sk-sb-8 {
   margin-left: 180px;
-  border: solid 2px rgb(234, 234, 234);
+  border: solid 2px #d3d3d3;
   border-radius: 8px;
   position: absolute;
   display: flex;
@@ -250,7 +300,7 @@ header .main-container {
 .lu-sb-2,
 .lu-sb-3 {
   margin-left: 180px;
-  border: solid 2px rgb(234, 234, 234);
+  border: solid 2px #d3d3d3;
   border-radius: 8px;
   position: absolute;
   display: flex;
@@ -276,19 +326,20 @@ header .main-container {
 .xp-lu-3 {
   width: 10%;
 }
-.link{
+.link {
   width: 100vw;
   height: 64px;
+  background-color: #d3d3d3;
   display: flex;
   justify-content: center;
 }
-.link_container{
+.link_container {
   display: flex;
   align-items: center;
   gap: 1.5rem;
   width: 80%;
 }
-.link_container a{
+.link_container a {
   font-weight: 400;
   text-decoration: none;
   color: #000;
