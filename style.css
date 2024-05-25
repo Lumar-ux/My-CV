@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap");
-@media only screen and (max-width: 768px) {
-}
+
 * {
   margin: 0;
   padding: 0;
@@ -14,13 +13,13 @@ body {
   font-family: "Epilogue", "Open Sans", sans-serif;
   font-optical-sizing: auto;
 }
-.shadow_header {
+/* .shadow_header {
   width: 100%;
   height: 95px;
   box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.5);
   position: absolute;
-  z-index: 0;
-}
+  z-index: 1;
+} */
 .header-container {
   color: #fffcf7;
   width: 100%;
@@ -30,13 +29,11 @@ body {
   justify-content: center;
 }
 .header-sub-container {
-  /* background-color: #fffcf7; */
   width: 80%;
   background-color: #383737;
   height: 95px;
   display: flex;
   justify-content: flex-end;
-  /* box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.5); */
 }
 .container-nav,
 .container-name {
@@ -50,6 +47,9 @@ body {
   text-transform: uppercase;
   font-weight: 600;
 }
+.only-gsm{
+  display: none;
+}
 .img_background_about {
   position: absolute;
   z-index: 0;
@@ -59,13 +59,11 @@ body {
 .img_background_about {
   background-image: url("asset/PP_LucasMaroy_bef_nb\ copie\ 2.jpg");
   background-position: center;
-  /* height: 924px; */
 }
 .body-container {
-  width: 100vw;
+  width: 100%;
   background-color: #000000;
   z-index: 1;
-  /* height: 100vh; */
   display: flex;
   justify-content: center;
 }
@@ -85,7 +83,6 @@ body {
   font-size: 80px;
   text-transform: uppercase;
   color: #3cff00;
-  /* color: #A1FFFF; */
 }
 .about_contenue {
   display: flex;
@@ -95,17 +92,12 @@ body {
   bottom: 200px;
   width: 100%;
   height: 100%;
-  /* margin-bottom: 12rem;
-  margin-top: 6rem; */
 }
-.about_contenue img {
+/* .about_contenue img {
   width: 30%;
   border-radius: 17%;
-  /* border: 1rem solid white; */
   box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.5);
-  /* height: 55%; */
-  /* margin-right: 8rem; */
-}
+} */
 .textabout {
   width: 40%;
   display: flex;
@@ -115,7 +107,6 @@ body {
 .textabout h2 {
   color: #d3d3d3;
   font-weight: 500;
-  padding-bottom: 9px;
 }
 .textabout p {
   text-align: justify;
@@ -166,6 +157,11 @@ body {
 .ed-4 p {
   color: #3cff00;
 }
+
+.title_expe {
+  margin-bottom: 1.5rem;
+  color: #3cff00;
+}
 .expe_container {
   width: 100%;
   height: 608px;
@@ -174,9 +170,20 @@ body {
   gap: 1rem;
   margin-bottom: 8rem;
 }
-.title_expe {
-  margin-bottom: 1.5rem;
-  color: #3cff00;
+.ex-1,
+.ex-2,
+.ex-3,
+.ex-4,
+.ex-5,
+.ex-6 {
+  border-radius: 20px;
+  padding: 1.5rem;
+}
+.ex-2{
+  grid-area: 1/2/1/3;
+}
+.ex-6{
+  grid-area: 3/2/4/3;
 }
 .ex-2,
 .ex-6 {
@@ -191,17 +198,7 @@ body {
   align-items: center;
   color: #3cff00;
 }
-.ex-1,
-.ex-2,
-.ex-3,
-.ex-4,
-.ex-5,
-.ex-6 {
-  height: 192px;
-  width: 753.9px;
-  border-radius: 20px;
-  padding: 1.5rem;
-}
+
 .ex-1,
 .ex-4,
 .ex-5 {
@@ -250,9 +247,6 @@ body {
 .sk-8 h2 {
   font-weight: 400;
 }
-/* .sk-1 h2{
-  margin-right: 2rem;
-} */
 .sk-sb-1,
 .sk-sb-2,
 .sk-sb-3,
@@ -283,6 +277,7 @@ body {
   background-color: rgb(234, 234, 234);
   border-radius: 8px;
   height: 11px;
+  z-index: 1;
 }
 .xp-1 {
   width: 80%;
@@ -310,7 +305,7 @@ body {
 }
 .pourcentage {
   position: absolute;
-  left: 60.5%;
+  left: 73%;
 }
 .title_lunguage {
   margin-top: 8rem;
@@ -319,9 +314,7 @@ body {
 }
 .lunguage {
   width: 100%;
-  /* display: inline; */
   height: 218px;
-  /* margin-bottom: 200px; */
 }
 .lu-1,
 .lu-2,
@@ -365,26 +358,101 @@ body {
 .xp-lu-3 {
   width: 10%;
 }
-footer .link {
+.link_container{
   width: 100vw;
-  height: 64px;
+  height: 100%;
   background-color: rgb(234, 234, 234);
   border: 2px solid #d3d3d355;
   display: flex;
   justify-content: center;
 }
-.link_container {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  width: 80%;
+.link_sub_container #title_contact{
+  margin: 16px 0 10px 0;
 }
-.link_container a {
+.link_sub_container {
+  width: 80%;
+  height: 100%;
+  
+}
+.link {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+.link a {
   font-weight: 400;
   text-decoration: none;
   color: #000;
 }
+.link a:hover, .link p:hover{
+  text-decoration: underline;
+  color: #3cff00;
+}
 .container-nav a {
   text-decoration: none;
   color: #d3d3d3;
+}
+.container-nav a:hover {
+  text-decoration: underline;
+  color: #ffffff;
+}
+@media only screen and (max-width: 500px) {
+  .educ_canontainer {
+    grid-template: 1fr 1fr 1fr 1fr / 100%;
+    height: 1202px;
+  }
+  .expe_container{
+    display: flex;
+    flex-direction: column;
+    height: 908px;
+  }
+  .skils{
+   
+    /* width: 400px; */
+    height: 450px;
+    width: 100%;
+    align-items: none;
+  }
+  .sk-1,.sk-2,.sk-3,.sk-4,.sk-5,.sk-6,.sk-7,.sk-8{
+    flex-direction: row;
+    width: 100%;
+    margin-block: 16px;
+  }
+  .sk-1 h2,.sk-2 h2,.sk-3 h2,.sk-4 h2,.sk-5 h2,.sk-6 h2,.sk-7 h2,.sk-8 h2{
+    margin-bottom: 4px;
+    /* align-self: ; */
+  }
+  .sk-sb-1,.sk-sb-2,.sk-sb-3,.sk-sb-4,.sk-sb-5,.sk-sb-6,.sk-sb-7,.sk-sb-8{
+    width: 70%;
+    margin-left: 0px;
+    /* position: relative; */
+  }
+  .pourcentage{
+    right: 10%;
+  }
+  .textabout{
+    width: 100%;
+    display: inline;;
+    margin-bottom: 4rem;
+  }
+  .textabout #title_about{
+    margin-bottom: 8px;
+  }
+  .only-gsm{
+    display: block;
+    width: 2rem;
+  }
+  .nav-about,.nav-education,.nav-experience,.nav-skills,.nav-speak,.nav-contact{
+    display: none;
+  }
+  .link{
+    flex-direction: column;
+    margin-bottom: 2px;
+    gap: 1rem;
+  }
+  .link:last-child{
+    margin-bottom: 1rem;
+  }
 }
